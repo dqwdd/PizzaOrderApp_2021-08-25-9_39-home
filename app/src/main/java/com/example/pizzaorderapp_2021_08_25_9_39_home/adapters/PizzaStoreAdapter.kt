@@ -35,7 +35,6 @@ class PizzaStoreAdapter(
 
         Glide.with(mContext).load(data.LogoURL).into(logoImg)
 
-
         
         return row
     }
