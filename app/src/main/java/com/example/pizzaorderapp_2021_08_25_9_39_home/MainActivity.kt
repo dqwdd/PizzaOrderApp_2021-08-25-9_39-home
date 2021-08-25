@@ -2,6 +2,7 @@ package com.example.pizzaorderapp_2021_08_25_9_39_home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.pizzaorderapp_2021_08_25_9_39_home.adapters.MainViewPagerAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {
