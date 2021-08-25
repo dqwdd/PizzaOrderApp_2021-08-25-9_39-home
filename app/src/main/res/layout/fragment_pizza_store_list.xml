@@ -5,9 +5,11 @@
     android:orientation="vertical"
     android:gravity="center">
 
-    <TextView
+    <ListView
+        android:id="@+id/pizzaStoreListView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="피자가게나오는화면"/>
+        android:layout_height="wrap_content">
+
+    </ListView>
 
 </LinearLayout>

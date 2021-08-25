@@ -7,7 +7,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {
 
-    lateinit var mvpa : MainViewPagerAdapter
+    lateinit var mainViewPagerAdapter : MainViewPagerAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,12 +16,6 @@ class MainActivity : BaseActivity() {
         setValues()
         setupEvents()
 
-        mvpa = MainViewPagerAdapter( supportFragmentManager )
-        mainViewPager.adapter = mvpa
-
-//        탭 레이아웃과 뷰페이저 연동하는 기능 추가!
-        mainTabLayout.setupWithViewPager(mainViewPager)
-
     }
 
 
@@ -29,9 +23,11 @@ class MainActivity : BaseActivity() {
     }
 
     override fun setValues() {
-        mvpa = MainViewPagerAdapter( supportFragmentManager )
-        mvpa.adapter = mvpa
+        mainViewPagerAdapter = MainViewPagerAdapter( supportFragmentManager )
+        mainViewPager.adapter = mainViewPagerAdapter
 
+
+//        탭 레이아웃과 뷰페이저 연동하는 기능 추가!
         mainTabLayout.setupWithViewPager(mainViewPager)
 
     }
