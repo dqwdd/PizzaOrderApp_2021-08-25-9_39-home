@@ -1,5 +1,6 @@
 package com.example.pizzaorderapp_2021_08_25_9_39_home.fragments
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -31,5 +32,19 @@ class MyProfileFragment : Fragment() {
         }
 
 //        nickNameTxt.text = roomData.address
+
+
+
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode==REQ_FOR_NICKNAME) {
+            if (requestCode== Activity.RESULT_OK) {
+                val newNickname = data!!.getStringExtra("nickname")
+                nickNameTxt.text=newNickname
+            }
+        }
+
     }
 }
