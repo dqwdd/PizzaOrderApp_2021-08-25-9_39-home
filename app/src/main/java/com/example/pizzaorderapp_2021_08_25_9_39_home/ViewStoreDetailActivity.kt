@@ -31,4 +31,3 @@ class ViewStoreDetailActivity : BaseActivity() {
 //        floorTxt.text = roomData.getFormattedFloor()
 
     }
-}
