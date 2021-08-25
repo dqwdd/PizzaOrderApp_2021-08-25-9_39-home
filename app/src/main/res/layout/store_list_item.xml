@@ -15,18 +15,18 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/pizzaLogo"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:src="@mipmap/ic_launcher"
             app:civ_border_width="2dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="가게이름"/>
+            android:text="가게이름"
+            android:textSize="20sp"/>
 
         </LinearLayout>
 
-    </LinearLayout>
 
 </LinearLayout>
