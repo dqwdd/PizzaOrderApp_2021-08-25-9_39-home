@@ -1,6 +1,7 @@
 package com.example.pizzaorderapp_2021_08_25_9_39_home
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.bumptech.glide.Glide
@@ -26,17 +27,15 @@ class MainActivity : BaseActivity() {
 
 
     override fun setupEvents() {
+        dialBtn.setOnClickListener {
+            val myUri = Uri.parse("tel:${mStoreData.PhoneNum}")
+            val myIntent = Intent(Intent.ACTION_DIAL,myUri)
+            startActivity(myIntent)
+        }
     }
 
     override fun setValues() {
-//        mainViewPagerAdapter = MainViewPagerAdapter( supportFragmentManager )
-//        mainViewPager.adapter = mainViewPagerAdapter
-//
-//
-////        탭 레이아웃과 뷰페이저 연동하는 기능 추가!
-//        mainTabLayout.setupWithViewPager(mainViewPager)
-//
-//    }
+
         mStoreData = intent.getSerializableExtra("store") as StoreData
 //        as StoreData 안붙이면 에러남
 //        데이터 형식이(아님 방식) 달라서 그런듯
