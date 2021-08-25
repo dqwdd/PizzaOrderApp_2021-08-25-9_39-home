@@ -27,11 +27,7 @@ class MainActivity : BaseActivity() {
 
 
     override fun setupEvents() {
-        dialBtn.setOnClickListener {
-            val myUri = Uri.parse("tel:${mStoreData.PhoneNum}")
-            val myIntent = Intent(Intent.ACTION_DIAL,myUri)
-            startActivity(myIntent)
-        }
+
     }
 
     override fun setValues() {
