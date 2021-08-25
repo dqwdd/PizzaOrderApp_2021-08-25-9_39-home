@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.pizzaorderapp_2021_08_25_9_39_home.R
+import com.example.pizzaorderapp_2021_08_25_9_39_home.ViewStoreDetailActivity
 import com.example.pizzaorderapp_2021_08_25_9_39_home.adapters.PizzaStoreAdapter
 import com.example.pizzaorderapp_2021_08_25_9_39_home.datas.StoreData
 import kotlinx.android.synthetic.main.fragment_pizza_store_list.*
@@ -20,15 +21,6 @@ class PizzaStoreListFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?, savedInstanceState: Bundle?) : View?{
-
-
-//        pizzaStoreListView.setOnItemClickListener { adapterView, view, position, l ->
-//            val clickedRoom = mPizzaStors[ position ]
-//            val myIntent = Intent(mContext, ViewStoreDetailActivity::class.java)
-//            myIntent.putExtra("roomData", clickedRoom)
-//            startActivity(myIntent)
-//        }
-
 
         return inflater.inflate(R.layout.fragment_pizza_store_list, container, false)
     }
@@ -44,6 +36,14 @@ class PizzaStoreListFragment : Fragment() {
 
         mPizzaStoreAdapter = PizzaStoreAdapter(requireContext(), R.layout.store_list_item, mPizzaStores)
         pizzaStoreListView.adapter = mPizzaStoreAdapter
+
+        pizzaStoreListView.setOnItemClickListener { adapterView, view, position, l ->
+            val clickedRoom = mPizzaStores[ position ]
+            val myIntent = Intent(requireContext(), ViewStoreDetailActivity::class.java)
+            myIntent.putExtra("store", clickedRoom)
+            startActivity(myIntent)
+//            putExtra 빨간 에러 안사라지면  : Serializable 하자
+        }
 
     }
 }
