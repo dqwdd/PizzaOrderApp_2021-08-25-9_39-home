@@ -12,7 +12,12 @@ class MyProfileFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
-        container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        container: ViewGroup?, savedInstanceState: Bundle?) : View?{
         return inflater.inflate(R.layout.fragment_myprofilefragment, container, false)
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+//        이건 코드 딱히 x
     }
 }
