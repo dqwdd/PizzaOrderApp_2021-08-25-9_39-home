@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.pizzaorderapp_2021_08_25_9_39_home.datas.StoreData
-import com.gun0912.tedpermission.rx2.TedPermission
 import kotlinx.android.synthetic.main.activity_view_store_detail.*
 
 class ViewStoreDetailActivity : BaseActivity() {
@@ -36,11 +35,5 @@ class ViewStoreDetailActivity : BaseActivity() {
     }
 
         val StoreData = intent.getSerializableExtra("StoreData")  as StoreData
-
-//        priceTxt.text = roomData.getFormattedPrice()
-//        descriptionTxt.text = roomData.description
-//
-//        addressTxt.text = roomData.address
-//        floorTxt.text = roomData.getFormattedFloor()
 
     }
