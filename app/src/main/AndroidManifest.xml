@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PizzaOrderApp_202108259_39home">
         <activity
+            android:name=".fragments.PizzaStoreListFragment"
+            android:exported="true" />
+        <activity
+            android:name=".fragments.MyProfileFragment"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
